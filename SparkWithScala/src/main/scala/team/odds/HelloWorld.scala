@@ -5,6 +5,11 @@ import org.apache.spark.SparkContext
 object HelloWorld {
   def main(args: Array[String]): Unit = {
     val sc = new SparkContext("local[*]", "HelloWorld")
-    println("Hello World!")
+    val lines = sc.textFile("data/ml-100k/u.data")
+    val numLines = lines.count()
+
+    println("Hello World! The u.data file has " + numLines + " lines.")
+
+    sc.stop()
   }
 }
