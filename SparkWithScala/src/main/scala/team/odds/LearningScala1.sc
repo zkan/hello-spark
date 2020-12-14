@@ -12,3 +12,4 @@ print(helloThere + " " + numberOne)
 
 print(f"Number one is $numberOne%05d")
 print(s"Number one is $numberOne%05d")
+println(s"${numberOne + 5}")
