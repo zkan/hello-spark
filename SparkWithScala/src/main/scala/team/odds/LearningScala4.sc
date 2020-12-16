@@ -15,3 +15,7 @@ numberList.reduce((x: Int, y: Int) => {x + y})
 
 val iHateFive = numberList.filter((x: Int) => x != 5)
 val iHateThree = numberList.filter(_ != 3)
+
+val shipMap = Map("Kirk" -> "Enterprise", "Picard" -> "Enterprise-D")
+shipMap("Picard")
+shipMap.getOrElse("Kan", "Nothing")
