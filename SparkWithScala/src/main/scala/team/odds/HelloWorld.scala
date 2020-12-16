@@ -10,6 +10,10 @@ object HelloWorld {
 
     println("Hello World! The u.data file has " + numLines + " lines.")
 
+    val rdd = sc.parallelize(List(1, 2, 3, 4))
+    val squares = rdd.map(x => x * x)
+    squares.collect().foreach(println)
+
     sc.stop()
   }
 }
